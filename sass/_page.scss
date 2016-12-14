@@ -19,13 +19,19 @@
   li {
     display: inline-block;
     font-size: 1.5rem;
-    margin-right: .75rem;
+    margin-right: 2rem;
     &:last-child {
       margin: 0;
     }
   }
   a {
-    color: white;
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 100%;
+    background-color: white;
+    color: black;
     transition: all .25s ease-in;
     opacity: 1;
     &:hover {
