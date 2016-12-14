@@ -1,0 +1,35 @@
+
+.hero {
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../images/laptop-background.jpg);
+  background-size: cover;
+  background-position: top;
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 100vh;
+  h1 {
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  li {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: .75rem;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  a {
+    color: white;
+    transition: all .25s ease-in;
+    opacity: 1;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
