@@ -80,9 +80,10 @@ body {
     height: 2.5rem;
     line-height: 2.5rem;
     border-radius: 100%;
-    background-color: white;
-    color: black;
+    border: 2px solid white;
+    color: white;
     transition: all .25s ease-in;
     opacity: 1; }
     .hero a:hover {
-      opacity: 0.5; }
+      background-color: white;
+      color: black; }
