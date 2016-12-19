@@ -46,7 +46,8 @@ table {
   border-spacing: 0; }
 
 body {
-  font: 24px sans-serif;
+  font: 24px Raleway, sans-serif;
+  font-weight: normal;
   background-size: cover;
   color: white; }
 
