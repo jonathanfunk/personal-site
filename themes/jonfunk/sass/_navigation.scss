@@ -74,10 +74,18 @@ a {
     border: 1px solid white;
     color: white;
     font-size: 2rem;
+    transition: background-color .5s ease;
+    &:hover {
+      background-color: white;
+    }
   }
   a {
     display: block;
     text-decoration: none;
     color: white;
+    transition: color .5s ease;
+    &:hover {
+      color: #6e6e6e;
+    }
   }
 }

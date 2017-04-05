@@ -243,12 +243,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0; }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1; }
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 4rem; } }
 
 h2 {
-  font-size: 2rem; }
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: 0; }
+  @media (min-width: 600px) {
+    h2 {
+      font-size: 2rem; } }
 
 /* Copy */
 p {
@@ -477,11 +486,17 @@ a {
     line-height: 60px;
     border: 1px solid white;
     color: white;
-    font-size: 2rem; }
+    font-size: 2rem;
+    transition: background-color .5s ease; }
+    .main-navigation li:hover {
+      background-color: white; }
   .main-navigation a {
     display: block;
     text-decoration: none;
-    color: white; }
+    color: white;
+    transition: color .5s ease; }
+    .main-navigation a:hover {
+      color: #6e6e6e; }
 
 /*--------------------------------------------------------------
 # Accessibility
