@@ -1,0 +1,83 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+
+/* Links */
+
+a {
+  color: $color__link;
+  &:visited {
+    color: $color__link-visited;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+
+/* Header */
+
+.site-header {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-mobile.jpg);
+  background-size: cover;
+  background-position: 60%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-tablet.jpg);
+    background-size: cover;
+    background-position: 60%;
+  }
+  @include desktop {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background.jpg);
+    background-size: cover;
+    background-position: 60%;
+  }
+}
+
+
+/* Menus */
+
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  li {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid white;
+    color: white;
+    font-size: 2rem;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+}
