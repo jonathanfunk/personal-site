@@ -6,86 +6,128 @@
 /* Links */
 
 a {
-  color: $color__link;
-  &:visited {
-    color: $color__link-visited;
-  }
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color__link-hover;
-  }
-  &:focus {
-    outline: thin dotted;
-  }
-  &:hover,
-  &:active {
-    outline: 0;
-  }
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
 }
-
-
-/* Header */
-
-.site-header {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-mobile.jpg);
-  background-size: cover;
-  background-position: 60%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include tablet {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-tablet.jpg);
-    background-size: cover;
-    background-position: 60%;
-  }
-  @include desktop {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background.jpg);
-    background-size: cover;
-    background-position: 60%;
-  }
-}
-
 
 /* Menus */
 
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  li {
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 60px;
-    border: 1px solid white;
-    color: white;
-    font-size: 2rem;
-    transition: background-color .5s ease;
-    &:hover {
-      background-color: white;
-    }
-  }
-  a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    transition: color .5s ease;
-    &:hover {
-      color: #6e6e6e;
-    }
-  }
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: $base__space-unit;
+			left: -999rem;
+			z-index: 99999;
+
+			ul {
+				left: -999rem;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 $base__space-unit;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
 }

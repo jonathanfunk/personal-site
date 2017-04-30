@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Jonathan Funk
 Author URI: http://www.jon-funk.com
 Description: A WordPress theme for Jonathan Funk.
-Version: 1.0.0
+Version: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
@@ -438,32 +438,6 @@ a {
   a:hover, a:active {
     outline: 0; }
 
-/* Header */
-.site-header {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-mobile.jpg);
-  background-size: cover;
-  background-position: 60%;
-  color: white;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
-  @media (min-width: 600px) {
-    .site-header {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-tablet.jpg);
-      background-size: cover;
-      background-position: 60%; } }
-  @media (min-width: 1024px) {
-    .site-header {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background.jpg);
-      background-size: cover;
-      background-position: 60%; } }
-
 /* Menus */
 .main-navigation {
   clear: both;
@@ -471,32 +445,64 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
+    display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
+    padding-left: 0; }
+    .main-navigation ul ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5rem;
+      left: -999rem;
+      z-index: 99999; }
+      .main-navigation ul ul ul {
+        left: -999rem;
+        top: 0; }
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .main-navigation ul ul a {
+        width: 200px; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
   .main-navigation li {
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 60px;
-    border: 1px solid white;
-    color: white;
-    font-size: 2rem;
-    transition: background-color .5s ease; }
-    .main-navigation li:hover {
-      background-color: white; }
+    float: left;
+    position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none;
-    color: white;
-    transition: color .5s ease; }
-    .main-navigation a:hover {
-      color: #6e6e6e; }
+    text-decoration: none; }
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; }
+  .main-navigation ul {
+    display: block; } }
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5rem;
+  overflow: hidden; }
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
