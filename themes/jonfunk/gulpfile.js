@@ -60,7 +60,7 @@ gulp.task('browser-sync', function () {
         proxy: 'http://localhost:8888/jonfunk/',
     });
 
-    gulp.watch(files).on('change', browserSync.reload);
+    gulp.watch(files).on('change', browserSync.reload({ stream: true}));
 });
 
 gulp.task('watch', function () {

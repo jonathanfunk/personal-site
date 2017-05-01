@@ -1,0 +1,13 @@
+/* Structure */
+
+section {
+  width: 100vw;
+  padding: 2rem 1.5rem;
+    &:nth-child(even){
+      background-color: $color__section-even;
+  }
+}
+
+.container {
+  max-width: 1000px;
+}
