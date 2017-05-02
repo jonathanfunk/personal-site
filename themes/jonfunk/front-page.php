@@ -13,22 +13,22 @@ get_header(); ?>
 				<h1><?php bloginfo( 'name' ); ?></h1>
 			  <p><?php bloginfo( 'description' ); ?></p>
 			</section>
-			<section class="about">
+			<section class="about" id="about">
         <div class="container">
          <h2>About</h2>
         </div>
 			</section>
-			<section class="projects">
+			<section class="projects" id="projects">
         <div class="container">
           <h2>Projects</h2>
         </div>
 			</section>
-			<section class="clients">
+			<section class="clients" id="clients">
         <div class="container">
           <h2>Clients</h2>
         </div>
 			</section>
-			<section class="contact">
+			<section class="contact" id="contact">
         <div class="container">
           <h2>Contact</h2>
         </div>

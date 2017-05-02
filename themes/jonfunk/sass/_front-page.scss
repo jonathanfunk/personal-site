@@ -6,8 +6,29 @@ section {
     &:nth-child(even){
       background-color: $color__section-even;
   }
+  &:focus {
+    outline: none;
+  }
+}
+
+.hero {
+  height: 200px;
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/jellyfish-background-mobile.jpg), center;
+  background-size: cover;
+  color: white;
+  @include tablet {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/jellyfish-background-tablet.jpg), center;
+    background-size: cover;
+    height: 400px;
+  }
+  @include desktop {
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/jellyfish-background.jpg), center;
+    background-size: cover;
+    height: 100vh;
+  }
 }
 
 .container {
   max-width: 1000px;
+  margin: 0 auto;
 }

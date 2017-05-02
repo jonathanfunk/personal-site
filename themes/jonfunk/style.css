@@ -683,6 +683,25 @@ section {
   padding: 2rem 1.5rem; }
   section:nth-child(even) {
     background-color: #f2f2f2; }
+  section:focus {
+    outline: none; }
+
+.hero {
+  height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-mobile.jpg), center;
+  background-size: cover;
+  color: white; }
+  @media (min-width: 600px) {
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-tablet.jpg), center;
+      background-size: cover;
+      height: 400px; } }
+  @media (min-width: 1024px) {
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background.jpg), center;
+      background-size: cover;
+      height: 100vh; } }
 
 .container {
-  max-width: 1000px; }
+  max-width: 1000px;
+  margin: 0 auto; }
