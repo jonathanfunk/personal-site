@@ -686,6 +686,15 @@ section {
   section:focus {
     outline: none; }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.container-small {
+  max-width: 800px;
+  margin: 0 auto; }
+
+/* Hero Section */
 .hero {
   height: 200px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-mobile.jpg), center;
@@ -712,16 +721,31 @@ section {
     font-size: 2rem;
     margin-bottom: 0; }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto; }
-
+/* Client Section */
 .clients ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center; }
   .clients ul img {
     margin-bottom: 20px; }
+
+.contact ul {
+  width: 500px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.contact a {
+  font-size: 2rem;
+  color: grey; }

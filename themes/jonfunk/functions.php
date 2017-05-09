@@ -86,8 +86,8 @@ add_filter( 'stylesheet_uri', 'jonathan_funk_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function jonathan_funk_scripts() {
-	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Raleway', false);
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_enqueue_style( 'jonathan-funk-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'jonathan-funk-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
