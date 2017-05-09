@@ -29,12 +29,14 @@ get_header(); ?>
 			<section class="clients" id="clients">
         <div class="container">
           <h2>Feature Clients</h2>
+					<ul>
 					<?php
 						$feature_clients = CFS()->get('feature_clients');
 						foreach ($feature_clients as $client) {
-							echo '<img src="'.$client["client"].'"/>';
+							echo '<li><img src="'.$client["client"].'"/></li>';
 						}
 					?>
+					</ul>
         </div>
 			</section>
 			<section class="contact" id="contact">

@@ -2,7 +2,7 @@
 
 section {
   width: 100vw;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
     &:nth-child(even){
       background-color: $color__section-even;
   }
@@ -39,4 +39,15 @@ section {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.clients {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img {
+      margin-bottom: 20px;
+    }
+  }
 }

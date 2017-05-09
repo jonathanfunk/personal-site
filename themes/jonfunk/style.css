@@ -253,7 +253,7 @@ h1 {
 h2 {
   font-size: 2.2rem;
   line-height: 1;
-  margin-bottom: 1rem; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 600px) {
     h2 {
       font-size: 2rem; } }
@@ -332,7 +332,9 @@ ul, ol {
   margin: 0 0 1.5rem 3rem; }
 
 ul {
-  list-style: disc; }
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
 ol {
   list-style: decimal; }
@@ -678,7 +680,7 @@ object {
 /* Structure */
 section {
   width: 100vw;
-  padding: 2rem 1.5rem; }
+  padding: 3rem 1.5rem; }
   section:nth-child(even) {
     background-color: #f2f2f2; }
   section:focus {
@@ -713,3 +715,13 @@ section {
 .container {
   max-width: 1000px;
   margin: 0 auto; }
+
+.clients ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .clients ul img {
+    margin-bottom: 20px; }
