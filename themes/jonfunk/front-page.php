@@ -10,12 +10,15 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<section class="hero">
-				<h1><?php bloginfo( 'name' ); ?></h1>
-			  <p><?php bloginfo( 'description' ); ?></p>
+				<div class="hero-text">
+					<h1><?php bloginfo( 'name' ); ?></h1>
+					<p><?php bloginfo( 'description' ); ?></p>
+				</div>
 			</section>
 			<section class="about" id="about">
         <div class="container">
          <h2>About</h2>
+				 <?php echo CFS()->get( 'about' ); ?>
         </div>
 			</section>
 			<section class="projects" id="projects">
@@ -25,7 +28,13 @@ get_header(); ?>
 			</section>
 			<section class="clients" id="clients">
         <div class="container">
-          <h2>Clients</h2>
+          <h2>Feature Clients</h2>
+					<?php
+						$feature_clients = CFS()->get('feature_clients');
+						foreach ($feature_clients as $client) {
+							echo '<img src="'.$client["client"].'"/>';
+						}
+					?>
         </div>
 			</section>
 			<section class="contact" id="contact">

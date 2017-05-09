@@ -16,6 +16,9 @@ section {
   background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/jellyfish-background-mobile.jpg), center;
   background-size: cover;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include tablet {
     background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/jellyfish-background-tablet.jpg), center;
     background-size: cover;
@@ -25,6 +28,11 @@ section {
     background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../images/jellyfish-background.jpg), center;
     background-size: cover;
     height: 100vh;
+  }
+  p {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0;
   }
 }
 

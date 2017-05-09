@@ -233,8 +233,6 @@ textarea {
   color: #2d2d2d;
   font-family: "raleway", sans-serif;
   font-size: 16px;
-  font-size: 16px;
-  font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
@@ -254,8 +252,8 @@ h1 {
 
 h2 {
   font-size: 2.2rem;
-  line-height: 2;
-  margin-bottom: 0; }
+  line-height: 1;
+  margin-bottom: 1rem; }
   @media (min-width: 600px) {
     h2 {
       font-size: 2rem; } }
@@ -690,7 +688,13 @@ section {
   height: 200px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-mobile.jpg), center;
   background-size: cover;
-  color: white; }
+  color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
   @media (min-width: 600px) {
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-tablet.jpg), center;
@@ -701,6 +705,10 @@ section {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background.jpg), center;
       background-size: cover;
       height: 100vh; } }
+  .hero p {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0; }
 
 .container {
   max-width: 1000px;

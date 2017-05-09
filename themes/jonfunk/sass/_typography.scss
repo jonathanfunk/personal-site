@@ -10,7 +10,6 @@ textarea {
 	color: $color__text-main;
 	font-family: $font__main;
 	font-size: 16px;
-	@include font-size(1);
 	line-height: $font__line-height-body;
 }
 
@@ -34,8 +33,8 @@ h1 {
 
 h2 {
   font-size: 2.2rem;
-  line-height: 2;
-  margin-bottom: 0;
+  line-height: 1;
+  margin-bottom: 1rem;
   @include tablet {
     font-size: 2rem;
   }
