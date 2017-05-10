@@ -18,7 +18,7 @@ get_header(); ?>
 			<section class="about" id="about">
         <div class="container">
          <h2>Who I am</h2>
-				 <?php echo CFS()->get( 'about' ); ?>
+				 <p><?php echo CFS()->get( 'about' ); ?></p>
          <h2>What I do</h2>
 				 <ul class="grayscale-hover">
           <?php

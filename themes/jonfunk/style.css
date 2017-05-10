@@ -435,6 +435,7 @@ a {
   height: 60px;
   width: 100vw;
   position: fixed;
+  z-index: 1;
   background: transparent;
   transition: all 1s ease; }
   .site-header .container {
@@ -445,18 +446,19 @@ a {
     -ms-flex-align: center;
         align-items: center;
     height: 100%; }
-  .site-header a {
+  .site-header a:hover {
     color: white; }
-    .site-header a:hover {
-      color: black; }
   .site-header h2 {
     margin-bottom: 0; }
 
 .nav-inverse {
   height: 80px;
-  background: white; }
+  background: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   .nav-inverse a {
     color: #b3b3b3; }
+    .nav-inverse a:hover {
+      color: black; }
 
 /* Menus */
 .main-navigation ul {
@@ -487,6 +489,8 @@ a {
   display: inline-block;
   padding: 1rem;
   text-transform: uppercase; }
+  .main-navigation li:nth-last-child() {
+    padding-right: 0; }
 
 .main-navigation a {
   display: block;
