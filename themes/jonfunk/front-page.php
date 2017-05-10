@@ -52,7 +52,7 @@ get_header(); ?>
         </div>
 			</section>
 			<section class="contact" id="contact">
-        <div class="container-small">
+        <div class="container">
           <h2>Contact</h2>
           <ul>
 						<li><a href="https://ca.linkedin.com/in/jonathan-funk" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></a></i>
