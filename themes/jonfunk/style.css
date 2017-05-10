@@ -432,10 +432,11 @@ a {
 
 /* Header */
 .site-header {
-  height: 80px;
+  height: 60px;
   width: 100vw;
   position: fixed;
-  background-color: white; }
+  background: transparent;
+  transition: all 1s ease; }
   .site-header .container {
     display: -ms-flexbox;
     display: flex;
@@ -444,10 +445,18 @@ a {
     -ms-flex-align: center;
         align-items: center;
     height: 100%; }
+  .site-header a {
+    color: white; }
+    .site-header a:hover {
+      color: black; }
   .site-header h2 {
     margin-bottom: 0; }
-    .site-header h2 a {
-      color: black; }
+
+.nav-inverse {
+  height: 80px;
+  background: white; }
+  .nav-inverse a {
+    color: #b3b3b3; }
 
 /* Menus */
 .main-navigation ul {

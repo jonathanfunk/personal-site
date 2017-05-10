@@ -29,21 +29,33 @@ a {
 /* Header */
 
 .site-header {
-	height: 80px;
+	height: 60px;
 	width: 100vw;
 	position: fixed;
-	background-color: white;
+	background: transparent;
+	transition: all 1s ease;
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
 	}
+	a {
+		color: white;
+		&:hover {
+			color: $color__link-hover;
+		}
+	}
 	h2 {
 		margin-bottom: 0;
-		a {
-			color: black;
-		}
+	}
+}
+
+.nav-inverse {
+	height: 80px;
+	background: white;
+	a {
+		color: $color__link;
 	}
 }
 
