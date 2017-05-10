@@ -8,6 +8,7 @@
 a {
 	color: $color__link;
 	transition: color 1s ease;
+	text-decoration: none;
 	&:visited {
 		color: $color__link-visited;
 	}
@@ -25,14 +26,30 @@ a {
 	}
 }
 
+/* Header */
+
+.site-header {
+	height: 80px;
+	width: 100vw;
+	position: fixed;
+	background-color: white;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	h2 {
+		margin-bottom: 0;
+		a {
+			color: black;
+		}
+	}
+}
+
 /* Menus */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
 	ul {
 		display: none;
 		list-style: none;
@@ -78,9 +95,9 @@ a {
 		}
 	}
 	li {
-		float: left;
-		position: relative;
-
+		display: inline-block;
+		padding: 1rem;
+		text-transform: uppercase;
 		&:hover > a,
 		&.focus > a {
 		}
