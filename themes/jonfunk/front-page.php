@@ -20,7 +20,7 @@ get_header(); ?>
          <h2>Who I am</h2>
 				 <?php echo CFS()->get( 'about' ); ?>
          <h2>What I do</h2>
-				 <ul>
+				 <ul class="grayscale-hover">
           <?php
             $fields = CFS()->get('what_i_do');
             foreach ($fields as $field) :
@@ -41,7 +41,7 @@ get_header(); ?>
 			<section class="clients" id="clients">
         <div class="container-small">
           <h2>Feature Clients</h2>
-					<ul>
+				 <ul class="grayscale-hover">
 						<?php
 							$fields = CFS()->get('feature_clients');
 							foreach ($fields as $field) {

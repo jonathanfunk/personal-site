@@ -683,6 +683,12 @@ section {
   max-width: 800px;
   margin: 0 auto; }
 
+.grayscale-hover:hover img {
+  filter: grayscale(100);
+  transition: filter 1s ease; }
+  .grayscale-hover:hover img:hover {
+    filter: grayscale(0); }
+
 /* Hero Section */
 .hero {
   height: 200px;
@@ -722,13 +728,9 @@ section {
 
 .about img {
   border-radius: 100%;
-  filter: grayscale(100);
-  transition: filter 1s ease;
   display: block;
   margin: 0 auto;
   margin-bottom: 1rem; }
-  .about img:hover {
-    filter: grayscale(0); }
 
 /* Client Section */
 .clients ul {

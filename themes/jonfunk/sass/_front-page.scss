@@ -21,6 +21,18 @@ section {
   margin: 0 auto;
 }
 
+.grayscale-hover {
+  &:hover {
+    img{
+      filter: grayscale(100);
+      transition: filter 1s ease;
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
 /* Hero Section */
 
 .hero {
@@ -62,14 +74,9 @@ section {
   }
   img {
     border-radius: 100%;
-    filter: grayscale(100);
-    transition: filter 1s ease;
     display: block;
     margin: 0 auto;
     margin-bottom: 1rem;
-    &:hover {
-      filter: grayscale(0);
-    }
   }
 }
 
