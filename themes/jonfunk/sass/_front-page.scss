@@ -101,3 +101,30 @@ section {
     font-size: 2rem;
   }
 }
+
+/* Footer */
+
+footer {
+  height: 40px;
+  background-color: $color__section-even;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  p {
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+  .site-info, .social-icons {
+    width: 100%;
+    max-width: 300px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    li {
+      line-height: 40px;
+    }
+  }
+}

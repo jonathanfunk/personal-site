@@ -772,3 +772,28 @@ section {
 
 .contact a {
   font-size: 2rem; }
+
+/* Footer */
+footer {
+  height: 40px;
+  background-color: #fcfcfc; }
+  footer .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  footer p {
+    margin-bottom: 0;
+    line-height: 40px; }
+  footer .site-info, footer .social-icons {
+    width: 100%;
+    max-width: 300px; }
+  footer ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    footer ul li {
+      line-height: 40px; }
