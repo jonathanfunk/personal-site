@@ -17,8 +17,9 @@ get_header(); ?>
 			</section>
 			<section class="about" id="about">
         <div class="container">
-         <h2>About</h2>
+         <h2>Who I am</h2>
 				 <?php echo CFS()->get( 'about' ); ?>
+         <h2>What I do</h2>
 				 <ul>
           <?php
             $fields = CFS()->get('what_i_do');

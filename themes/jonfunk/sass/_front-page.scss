@@ -48,6 +48,31 @@ section {
   }
 }
 
+/* About Section */
+
+.about {
+  ul {
+    @include tablet {
+      display: flex;
+    }
+    li {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  img {
+    border-radius: 100%;
+    filter: grayscale(100);
+    transition: filter 1s ease;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
 /* Client Section */
 
 

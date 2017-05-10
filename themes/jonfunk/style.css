@@ -259,6 +259,9 @@ h2 {
     h2 {
       font-size: 2rem; } }
 
+h3 {
+  font-size: 1.5rem; }
+
 /* Copy */
 p {
   margin-bottom: 1.5rem;
@@ -721,6 +724,26 @@ section {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 0; }
+
+/* About Section */
+@media (min-width: 600px) {
+  .about ul {
+    display: -ms-flexbox;
+    display: flex; } }
+
+.about ul li {
+  width: 100%;
+  padding: 1rem; }
+
+.about img {
+  border-radius: 100%;
+  filter: grayscale(100);
+  transition: filter 1s ease;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem; }
+  .about img:hover {
+    filter: grayscale(0); }
 
 /* Client Section */
 .clients ul {
