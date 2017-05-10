@@ -19,6 +19,17 @@ get_header(); ?>
         <div class="container">
          <h2>About</h2>
 				 <?php echo CFS()->get( 'about' ); ?>
+				 <ul>
+          <?php
+            $fields = CFS()->get('what_i_do');
+            foreach ($fields as $field) :
+            ?>
+              <li>
+                <?php echo '<img src="'.$field["skill_image"].'"/>'; ?>
+                <h3><?php echo $field["skill_name"]; ?>
+              </li>
+            <?php endforeach ?>
+					</ul>
         </div>
 			</section>
 			<section class="projects" id="projects">
@@ -30,12 +41,12 @@ get_header(); ?>
         <div class="container-small">
           <h2>Feature Clients</h2>
 					<ul>
-					<?php
-						$feature_clients = CFS()->get('feature_clients');
-						foreach ($feature_clients as $client) {
-							echo '<li><img src="'.$client["client"].'"/></li>';
-						}
-					?>
+						<?php
+							$fields = CFS()->get('feature_clients');
+							foreach ($fields as $field) {
+								echo '<li><img src="'.$field["client"].'"/></li>';
+							}
+						?>
 					</ul>
         </div>
 			</section>

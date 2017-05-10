@@ -253,7 +253,8 @@ h1 {
 h2 {
   font-size: 2.2rem;
   line-height: 1;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2rem;
+  text-transform: uppercase; }
   @media (min-width: 600px) {
     h2 {
       font-size: 2rem; } }
@@ -680,9 +681,9 @@ object {
 /* Structure */
 section {
   width: 100vw;
-  padding: 3rem 1.5rem; }
+  padding: 7rem 1.5rem; }
   section:nth-child(even) {
-    background-color: #f2f2f2; }
+    background-color: #fcfcfc; }
   section:focus {
     outline: none; }
 
@@ -732,10 +733,10 @@ section {
   -ms-flex-align: center;
       align-items: center; }
   .clients ul img {
-    margin-bottom: 20px; }
+    margin: 1rem; }
 
 .contact ul {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   display: -ms-flexbox;
   display: flex;
@@ -747,5 +748,4 @@ section {
       align-items: center; }
 
 .contact a {
-  font-size: 2rem;
-  color: grey; }
+  font-size: 2rem; }
