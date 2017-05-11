@@ -112,29 +112,32 @@ section {
 /* Footer */
 
 footer {
-  height: 70px;
   padding: 0 1rem;
   background-color: $color__section-even;
   .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include tablet {
+     justify-content: space-between;
+     align-items: center;
+    }
   }
   p {
     margin-bottom: 0;
     line-height: 40px;
   }
   .site-info, .social-icons {
+    height: 70px;
     width: 100%;
     max-width: 250px;
+    p, li {
+      line-height: 70px;
+    }
   }
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    li {
-      line-height: 40px;
-    }
   }
 }
