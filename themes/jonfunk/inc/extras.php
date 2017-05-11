@@ -20,3 +20,9 @@ function red_starter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
+
+add_filter( 'nav_menu_link_attributes', 'add_data_atts_to_nav', 10, 4 );
+    function add_data_atts_to_nav( $atts, $item, $args ) {
+    $atts['data-scroll'] = 'true';
+    return $atts;
+}

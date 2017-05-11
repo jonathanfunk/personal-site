@@ -89,6 +89,7 @@ function jonathan_funk_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'jonathan-funk-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 	wp_enqueue_script ( 'scripts', get_template_directory_uri() . '/build/js/scripts.min.js', array ( 'jquery' ), false, true); //Custom Scripts
+	wp_enqueue_script ( 'smooth-scroll', get_template_directory_uri() . '/build/js/smooth-scroll.min.js', array ( 'jquery' ), false, true); //Smooth Scroll Scripts
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

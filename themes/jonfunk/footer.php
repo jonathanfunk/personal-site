@@ -25,6 +25,10 @@
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
+		<script>
+    smoothScroll.init();
+</script>
+
 
 	</body>
 </html>
