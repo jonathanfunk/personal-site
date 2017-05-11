@@ -134,13 +134,13 @@ a {
 }
 
 /* Small menu. */
-.menu-toggle,
+.hamburger-menu,
 .main-navigation.toggled ul {
 	display: block;
 }
 
 @media screen and (min-width: 768px) {
-	.menu-toggle {
+	.hamburger-menu {
 		display: none;
 	}
 	.main-navigation ul {

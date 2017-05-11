@@ -10,6 +10,15 @@ $(window).scroll(function() {
     }
 });
 
+	$('.hamburger-menu').on('click', function() {
+		$('.bar').toggleClass('animate');
+    if ($('.bar').hasClass('animate')) {
+      console.log('hello')
+    } else {
+      console.log('goodbye')
+    }
+	})
+
  //This animates scroll navigation.
  var offset = $("header").height();
  $('a[href*="#"]:not([href="#"])').click(function() {
