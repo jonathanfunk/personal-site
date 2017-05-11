@@ -10,17 +10,26 @@ $(window).scroll(function() {
     }
 });
 
-	$('.hamburger-menu').on('click', function() {
-		$('.bar').toggleClass('animate');
+$('.hamburger-menu').on('click', function() {
+  $('.bar').toggleClass('animate');
+  if ($('.bar').hasClass('animate')) {
+    $('#primary-menu').show({width:'toggle'},350);
+  } else {
+    $('#primary-menu').hide({width:'toggle'},350);
+  }
+})
+
+$('#primary-menu a').on('click', function() {
+  $('.bar').removeClass('animate');
     if ($('.bar').hasClass('animate')) {
-      console.log('hello')
-    } else {
-      console.log('goodbye')
-    }
-	})
+    $('#primary-menu').show({width:'toggle'},350);
+  } else {
+    $('#primary-menu').hide({width:'toggle'},350);
+  }
+}) 
 
  //This animates scroll navigation.
- var offset = $("header").height();
+ var offset = $('header').height();
  $('a[href*="#"]:not([href="#"])').click(function() {
    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
      var target = $(this.hash);

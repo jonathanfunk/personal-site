@@ -437,7 +437,7 @@ a {
   position: fixed;
   z-index: 1;
   background: transparent;
-  transition: all 1s ease; }
+  transition: height 1s ease, background 1s ease; }
   .site-header .container {
     display: -ms-flexbox;
     display: flex;

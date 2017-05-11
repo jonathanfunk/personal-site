@@ -34,7 +34,7 @@ a {
 	position: fixed;
 	z-index: 1;
 	background: transparent;
-	transition: all 1s ease;
+	transition: height 1s ease, background 1s ease;
 	.container {
 		display: flex;
 		justify-content: space-between;
