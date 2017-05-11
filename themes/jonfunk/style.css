@@ -434,7 +434,6 @@ a {
 .site-header {
   height: 60px;
   width: 100vw;
-  padding: 0 1rem;
   position: fixed;
   z-index: 1;
   background: transparent;
@@ -446,7 +445,8 @@ a {
         justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
-    height: 100%; }
+    height: 100%;
+    padding: 0 1rem; }
   .site-header a:hover {
     color: white; }
   .site-header h2 {
@@ -466,7 +466,24 @@ a {
   display: none;
   list-style: none;
   margin: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  padding-top: 80px;
+  z-index: -1;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .main-navigation ul {
+      position: inherit;
+      width: auto;
+      height: auto;
+      background: transparent;
+      padding-top: 0;
+      text-align: center; } }
   .main-navigation ul ul {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     float: left;
@@ -487,22 +504,24 @@ a {
     left: auto; }
 
 .main-navigation li {
-  display: inline-block;
   padding: 1rem;
   text-transform: uppercase; }
-  .main-navigation li:last-child {
-    padding-right: 0; }
+  @media (min-width: 600px) {
+    .main-navigation li {
+      display: inline-block; }
+      .main-navigation li:last-child {
+        padding-right: 0; } }
 
 .main-navigation a {
   display: block;
   text-decoration: none; }
 
 /* Small menu. */
-.hamburger-menu,
+.menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 600px) {
   .hamburger-menu {
     display: none; }
   .main-navigation ul {
@@ -844,7 +863,7 @@ footer {
   background: #b3b3b3;
   transition: all 0ms 300ms; }
   .bar.animate {
-    background: rgba(255, 255, 255, 0); }
+    background: transparent; }
 
 .bar:before {
   content: "";

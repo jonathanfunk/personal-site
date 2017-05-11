@@ -31,7 +31,6 @@ a {
 .site-header {
 	height: 60px;
 	width: 100vw;
-	padding: 0 1rem;
 	position: fixed;
 	z-index: 1;
 	background: transparent;
@@ -41,6 +40,7 @@ a {
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
+    padding: 0 1rem;
 	}
 	a {
 		&:hover {
@@ -72,6 +72,23 @@ a {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    padding-top: 80px;
+    z-index: -1;
+    text-align: center;
+    @include tablet {
+      position: inherit;
+      width: auto;
+      height: auto;
+      background: transparent;
+      padding-top: 0;
+      text-align: center;
+    }
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -112,14 +129,16 @@ a {
 		}
 	}
 	li {
-		display: inline-block;
 		padding: 1rem;
 		text-transform: uppercase;
-		&:last-child{
-			padding-right: 0;
-		}
 		&:hover > a,
 		&.focus > a {
+		}
+		@include tablet {
+			display: inline-block;
+      &:last-child{
+        padding-right: 0;
+      }
 		}
 	}
 	a {
@@ -134,12 +153,12 @@ a {
 }
 
 /* Small menu. */
-.hamburger-menu,
+.menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
-@media screen and (min-width: 768px) {
+@include tablet  {
 	.hamburger-menu {
 		display: none;
 	}
