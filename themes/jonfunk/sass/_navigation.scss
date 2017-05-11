@@ -68,19 +68,21 @@ a {
 
 .main-navigation {
 	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 0;
+    overflow: hidden;
     background: white;
     padding-top: 80px;
     z-index: -1;
     text-align: center;
+    transition: height 1s ease;
     @include tablet {
       position: inherit;
       width: auto;
@@ -89,7 +91,6 @@ a {
       padding-top: 0;
       text-align: center;
     }
-
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
@@ -128,6 +129,9 @@ a {
 			left: auto;
 		}
 	}
+  .expanded {
+    height: 100vh;
+  }
 	li {
 		padding: 1rem;
 		text-transform: uppercase;

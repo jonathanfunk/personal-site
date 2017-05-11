@@ -463,7 +463,7 @@ a {
 
 /* Menus */
 .main-navigation ul {
-  display: none;
+  display: block;
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -471,11 +471,13 @@ a {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 0;
+  overflow: hidden;
   background: white;
   padding-top: 80px;
   z-index: -1;
-  text-align: center; }
+  text-align: center;
+  transition: height 1s ease; }
   @media (min-width: 600px) {
     .main-navigation ul {
       position: inherit;
@@ -502,6 +504,9 @@ a {
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
     left: auto; }
+
+.main-navigation .expanded {
+  height: 100vh; }
 
 .main-navigation li {
   padding: 1rem;

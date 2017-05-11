@@ -10,22 +10,15 @@ $(window).scroll(function() {
     }
 });
 
-$('.hamburger-menu').on('click', function() {
+$('.hamburger-menu').on('click', function(event) {
+  $(this).focus();  
   $('.bar').toggleClass('animate');
-  if ($('.bar').hasClass('animate')) {
-    $('#primary-menu').show({width:'toggle'},350);
-  } else {
-    $('#primary-menu').hide({width:'toggle'},350);
-  }
+  $('#primary-menu').toggleClass('expanded');
 })
 
 $('#primary-menu a').on('click', function() {
-  $('.bar').removeClass('animate');
-    if ($('.bar').hasClass('animate')) {
-    $('#primary-menu').show({width:'toggle'},350);
-  } else {
-    $('#primary-menu').hide({width:'toggle'},350);
-  }
+  $('#primary-menu').removeClass('expanded');
+  $('.bar').removeClass('animate'); 
 }) 
 
 })( jQuery );
