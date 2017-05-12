@@ -29,7 +29,7 @@ a {
 /* Header */
 
 .site-header {
-	height: 60px;
+	height: 80px;
 	width: 100vw;
 	position: fixed;
 	z-index: 1;
@@ -40,7 +40,6 @@ a {
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
-    padding: 0 1rem;
 	}
 	a {
 		&:hover {
@@ -53,7 +52,7 @@ a {
 }
 
 .nav-inverse {
-	height: 80px;
+	height: 60px;
 	background: white;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	a {
@@ -79,10 +78,10 @@ a {
     height: 0;
     overflow: hidden;
     background: white;
-    padding-top: 80px;
+    padding-top: 0;
     z-index: -1;
     text-align: center;
-    transition: height 1s ease;
+    transition: height 1s ease, padding 1s ease;
     @include tablet {
       position: inherit;
       width: auto;
@@ -131,6 +130,7 @@ a {
 	}
   .expanded {
     height: 100vh;
+    padding-top: 80px;
   }
 	li {
 		padding: 1rem;

@@ -34,9 +34,24 @@ get_header(); ?>
         </div>
 			</section>
 			<section class="projects" id="projects">
-        <div class="container">
-          <h2>Projects</h2>
-        </div>
+				<h2>Projects</h2>
+				<ul>
+          <?php
+          $args = array(
+            'post_type' => 'post',
+            'order' => 'DESC',);
+            $posts = get_posts( $args ); // returns an array of posts
+            ?>
+            <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+              <li>
+                <?php the_post_thumbnail(); ?>
+                <div class="preview-wrap">
+                  <h3><?php the_title() ?></h3>
+                  <p><a href="<?php the_permalink(); ?>">Read More</a></p>
+                </div>
+              </li>
+          <?php endforeach; wp_reset_postdata(); ?>
+				</ul>        
 			</section>
 			<section class="clients" id="clients">
         <div class="container-small">
