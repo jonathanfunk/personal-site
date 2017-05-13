@@ -802,7 +802,7 @@ section {
   .projects li img {
     transition: transform .5s ease; }
 
-.projects .preview-wrap {
+.projects .project-title {
   position: absolute;
   top: 0;
   left: 0;
@@ -811,15 +811,18 @@ section {
   background: rgba(255, 255, 255, 0.9);
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
   opacity: 0;
   transition: opacity 1s ease; }
 
 .projects .item-expanded img {
   transform: scale(1.1); }
 
-.projects .item-expanded .preview-wrap {
+.projects .item-expanded .project-title {
   opacity: 1; }
 
 /* Client Section */

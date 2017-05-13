@@ -44,10 +44,12 @@ get_header(); ?>
             ?>
             <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
               <li class="project-item">
-                <?php the_post_thumbnail(); ?>
-                <div class="preview-wrap">
-                  <h3><?php the_title() ?></h3>
-                  <p><a href="<?php the_permalink(); ?>">Read More</a></p>
+                <?php the_post_thumbnail('project-item-size'); ?>
+                <div class="project-title">
+									<div class="project-title-wrap">
+										<h3><?php the_title() ?></h3>
+										<p><a href="<?php the_permalink(); ?>">Read More</a></p>
+									</div>
                 </div>
               </li>
           <?php endforeach; wp_reset_postdata(); ?>
