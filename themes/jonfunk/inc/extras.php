@@ -48,15 +48,32 @@ function wpshout_custom_sizes( $sizes ) {
  * Custom Single Project Background Image
  */
 function my_styles_method() {
-				if(!is_single()){
-					return;
-				}
-        $url = CFS()->get( 'background_image' );//This is grabbing the background image vis Custom Field Suite Plugin
-        $custom_css = "
-          .project-hero{
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$url}) no-repeat top center;
+    if(!is_single()){
+        return;
+    }
+    $url = CFS()->get( 'background_image' );//This is grabbing the background image via Custom Field Suite Plugin
+    $mobile = wp_get_attachment_image_src($url, 'mobile-size');
+    $tablet = wp_get_attachment_image_src($url, 'tablet-size');
+    $desktop = wp_get_attachment_image_src($url, 'desktop-size');
+    $custom_css = "
+        .project-hero {
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$mobile[0]}) no-repeat top center;
+          background-size: cover;
+        }
+        @media (min-width: 600px) {
+          .project-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$tablet[0]}) no-repeat top center;
             background-size: cover;
-          }";
-        wp_add_inline_style( 'jonathan-funk-style', $custom_css );
+          }
+        }
+        @media (min-width: 1024px) {
+          .project-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$desktop[0]}) no-repeat top center;
+            background-size: cover;
+            background-attachment: fixed;
+          }
+        }
+    ";
+    wp_add_inline_style( 'jonathan-funk-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'my_styles_method' );

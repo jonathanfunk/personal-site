@@ -768,6 +768,7 @@ section {
   @media (min-width: 1024px) {
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background.jpg), center;
+      background-attachment: fixed;
       background-size: cover;
       height: 100vh; } }
   .hero p {
@@ -816,7 +817,7 @@ section {
   -ms-flex-align: center;
       align-items: center;
   text-align: center;
-  transition: display 1s ease; }
+  transition: display .5s ease, opacity 1s ease; }
 
 .projects .item-expanded img {
   transform: scale(1.1); }

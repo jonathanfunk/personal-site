@@ -17,7 +17,7 @@ $('.hamburger-menu').on('click', function(event) {
 })
 
 $('#primary-menu a').on('click', function() {
-  $('#primary-menu').removeClass('expanded');
+  $('#primary-menu').removeClass('menu-expanded');
   $('.bar').removeClass('animate'); 
 })
 
