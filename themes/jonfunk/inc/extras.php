@@ -43,3 +43,20 @@ function wpshout_custom_sizes( $sizes ) {
         'mobile-size' => __( 'Mobile Size' ),
     ) );
 }
+
+/**
+ * Custom Single Project Background Image
+ */
+function my_styles_method() {
+				if(!is_single()){
+					return;
+				}
+        $url = CFS()->get( 'background_image' );//This is grabbing the background image vis Custom Field Suite Plugin
+        $custom_css = "
+          .project-hero{
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$url}) no-repeat top center;
+            background-size: cover;
+          }";
+        wp_add_inline_style( 'jonathan-funk-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'my_styles_method' );

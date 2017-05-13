@@ -809,20 +809,21 @@ section {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.9);
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  opacity: 0;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
   text-align: center;
-  opacity: 0;
-  transition: opacity 1s ease; }
+  transition: display 1s ease; }
 
 .projects .item-expanded img {
   transform: scale(1.1); }
 
 .projects .item-expanded .project-title {
+  display: -ms-flexbox;
+  display: flex;
   opacity: 1; }
 
 /* Client Section */
@@ -886,6 +887,22 @@ footer {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
+
+.project-hero {
+  height: 300px;
+  color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  @media (min-width: 600px) {
+    .project-hero {
+      height: 400px; } }
+  @media (min-width: 1024px) {
+    .project-hero {
+      height: 100vh; } }
 
 .hamburger-menu {
   width: 35px;
