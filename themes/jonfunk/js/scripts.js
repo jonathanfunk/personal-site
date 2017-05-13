@@ -13,12 +13,16 @@ $(window).scroll(function() {
 $('.hamburger-menu').on('click', function(event) {
   $(this).focus();  
   $('.bar').toggleClass('animate');
-  $('#primary-menu').toggleClass('expanded');
+  $('#primary-menu').toggleClass('menu-expanded');
 })
 
 $('#primary-menu a').on('click', function() {
   $('#primary-menu').removeClass('expanded');
   $('.bar').removeClass('animate'); 
-}) 
+})
+
+$('.project-item').on('click', function(event) {
+    $(this).toggleClass('item-expanded');
+}); 
 
 })( jQuery );

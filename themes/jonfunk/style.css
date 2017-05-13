@@ -504,7 +504,7 @@ a {
   .main-navigation ul li.focus > ul {
     left: auto; }
 
-.main-navigation .expanded {
+.main-navigation .menu-expanded {
   height: 100vh;
   padding-top: 80px; }
 
@@ -797,7 +797,10 @@ section {
   display: flex; }
 
 .projects li {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
+  .projects li img {
+    transition: transform .5s ease; }
 
 .projects .preview-wrap {
   position: absolute;
@@ -809,7 +812,15 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+  opacity: 0;
+  transition: opacity 1s ease; }
+
+.projects .item-expanded img {
+  transform: scale(1.1); }
+
+.projects .item-expanded .preview-wrap {
+  opacity: 1; }
 
 /* Client Section */
 .clients ul {

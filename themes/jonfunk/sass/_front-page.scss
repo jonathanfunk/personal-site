@@ -90,6 +90,10 @@ section {
   }
   li {
     position: relative;
+    overflow: hidden;
+    img {
+      transition: transform .5s ease;
+    }
   }
   .preview-wrap {
     position: absolute;
@@ -100,6 +104,16 @@ section {
     background: rgba(255,255,255,.9);
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .item-expanded {
+    img {
+      transform: scale(1.1);
+    }
+    .preview-wrap {
+      opacity: 1
+    }
   }
 }
 

@@ -43,7 +43,7 @@ get_header(); ?>
             $posts = get_posts( $args ); // returns an array of posts
             ?>
             <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-              <li>
+              <li class="project-item">
                 <?php the_post_thumbnail(); ?>
                 <div class="preview-wrap">
                   <h3><?php the_title() ?></h3>
