@@ -26,8 +26,8 @@
 
 		<?php wp_footer(); ?>
 		<script>
-    smoothScroll.init();
-</script>
+			smoothScroll.init();
+		</script>
 
 
 	</body>
