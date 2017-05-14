@@ -44,7 +44,7 @@ get_header(); ?>
 							);
 						$categories = get_categories( $args );
 						foreach ( $categories as $category ) {
-							echo "<li class='filter' data-filter=." . $category->category_nicename . ">" . $category->name . "</li>";
+							echo "<li class='filter' data-filter=." . $category->category_nicename . ">" . $category->name . "s</li>";
 						}
 						?>
 				</ul>
@@ -61,7 +61,7 @@ get_header(); ?>
                 <div class="project-title">
 									<div class="project-title-wrap">
 										<h3><?php the_title() ?></h3>
-										<p><a href="<?php the_permalink(); ?>">Read More</a></p>
+										<p><a class="box-link" href="<?php the_permalink(); ?>">Read More</a></p>
 									</div>
                 </div>
               </li>

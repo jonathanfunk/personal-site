@@ -35,6 +35,16 @@ section {
   }
 }
 
+.box-link {
+  text-transform: uppercase;
+  padding: .5rem;
+  border: 1px solid $color__link;
+  transition: background 1s ease, border 1s ease, color;
+  &:hover {
+    background: $color__link;
+  }
+}
+
 /* Hero Section */
 
 .hero {
@@ -90,9 +100,10 @@ section {
     display: flex;
   }
   .filters {
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
     justify-content: space-around;
+    margin-bottom: 1rem;
     li {
       text-transform: uppercase;
       margin: 0 1rem;
@@ -107,12 +118,24 @@ section {
       color: $color__link-hover;
     }
   }
+  .project-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .project-item {
     position: relative;
     display: none;
     overflow: hidden;
+    width: 100%;
     img {
       transition: transform .5s ease;
+      width: 100%;
+    }
+    @include tablet {
+      max-width: 50%;
+    }
+    @include desktop {
+      max-width: 25%;
     }
   }
   .project-title {

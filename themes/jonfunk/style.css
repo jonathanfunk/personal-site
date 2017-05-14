@@ -424,7 +424,7 @@ a {
   a:visited {
     color: #b3b3b3; }
   a:hover, a:focus, a:active {
-    color: black; }
+    color: #2d2d2d; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -458,7 +458,7 @@ a {
   .nav-inverse a {
     color: #b3b3b3; }
     .nav-inverse a:hover {
-      color: black; }
+      color: #2d2d2d; }
 
 /* Menus */
 .main-navigation ul {
@@ -748,6 +748,14 @@ section {
   .grayscale-hover:hover img:hover {
     filter: grayscale(0); }
 
+.box-link {
+  text-transform: uppercase;
+  padding: .5rem;
+  border: 1px solid #b3b3b3;
+  transition: background 1s ease, border 1s ease, color; }
+  .box-link:hover {
+    background: #b3b3b3; }
+
 /* Hero Section */
 .hero {
   height: 300px;
@@ -798,10 +806,11 @@ section {
   display: flex; }
 
 .projects .filters {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  margin-bottom: 1rem; }
   .projects .filters li {
     text-transform: uppercase;
     margin: 0 1rem;
@@ -809,16 +818,30 @@ section {
     cursor: pointer;
     transition: color 1s ease; }
     .projects .filters li:hover {
-      color: black; }
+      color: #2d2d2d; }
   .projects .filters .active {
-    color: black; }
+    color: #2d2d2d; }
+
+.projects .project-list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .projects .project-item {
   position: relative;
   display: none;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
   .projects .project-item img {
-    transition: transform .5s ease; }
+    transition: transform .5s ease;
+    width: 100%; }
+  @media (min-width: 600px) {
+    .projects .project-item {
+      max-width: 50%; } }
+  @media (min-width: 1024px) {
+    .projects .project-item {
+      max-width: 25%; } }
 
 .projects .project-title {
   position: absolute;

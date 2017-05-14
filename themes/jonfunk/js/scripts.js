@@ -26,11 +26,8 @@
   });
 
   $(function () {
-    console.log('this should work')
     var filterList = {
       init: function () {
-        // MixItUp plugin
-        // http://mixitup.io
         $('.project-list').mixItUp({
           selectors: {
             target: '.project-item',
@@ -40,15 +37,9 @@
             filter: '*'
           }
         });
-
       }
-
     };
-
-    // Run the show!
     filterList.init();
-
-
   });
 
 })(jQuery);

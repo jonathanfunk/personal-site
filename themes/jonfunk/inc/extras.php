@@ -29,7 +29,7 @@ add_filter( 'nav_menu_link_attributes', 'add_data_atts_to_nav', 10, 4 );
     return $atts;
 }
 
-add_image_size( 'project-item-size', 400, 400, true );
+add_image_size( 'project-item-size', 400, 250, true );
 add_image_size( 'desktop-size', 1600, 1000, true );
 add_image_size( 'tablet-size', 640, 400, true );
 add_image_size( 'mobile-size', 320, 200, true );
