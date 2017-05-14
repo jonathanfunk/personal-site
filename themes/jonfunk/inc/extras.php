@@ -68,7 +68,7 @@ function my_styles_method() {
         }
         @media (min-width: 1024px) {
           .project-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$desktop[0]}) no-repeat top center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$desktop[0]}) no-repeat center;
             background-size: cover;
             background-attachment: fixed;
           }
@@ -77,3 +77,14 @@ function my_styles_method() {
     wp_add_inline_style( 'jonathan-funk-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'my_styles_method' );
+
+// add category nicenames in body and post class
+function category_id_class( $classes ) {
+	global $post;
+	foreach ( ( get_the_category( $post->ID ) ) as $category ) {
+		$classes[] = $category->category_nicename;
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'category_id_class' );
+add_filter( 'body_class', 'category_id_class' );

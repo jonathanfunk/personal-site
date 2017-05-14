@@ -35,7 +35,20 @@ get_header(); ?>
 			</section>
 			<section class="projects" id="projects">
 				<h2>Projects</h2>
-				<ul>
+				<ul class="filter">
+					<li data-filter="*">All</li>
+					<?php
+						$args = array(
+							'orderby' => 'name',
+							'parent' => 0
+							);
+						$categories = get_categories( $args );
+						foreach ( $categories as $category ) {
+							echo "<li data-filter=." . $category->category_nicename . ">" . $category->category_nicename . "</li>";
+						}
+						?>
+				</ul>
+				<ul class="project-list">
           <?php
           $args = array(
             'post_type' => 'post',
@@ -43,7 +56,7 @@ get_header(); ?>
             $posts = get_posts( $args ); // returns an array of posts
             ?>
             <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-              <li class="project-item">
+              <li <?php post_class( 'project-item' ); ?>>
                 <?php the_post_thumbnail('project-item-size'); ?>
                 <div class="project-title">
 									<div class="project-title-wrap">

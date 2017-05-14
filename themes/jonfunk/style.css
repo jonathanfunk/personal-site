@@ -793,14 +793,23 @@ section {
   margin-bottom: 1rem; }
 
 /* Projects Section */
-.projects ul {
+.projects .project-list, .projects .filter {
   display: -ms-flexbox;
   display: flex; }
 
-.projects li {
+.projects .filter {
+  width: 500px;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .projects .filter li {
+    text-transform: uppercase;
+    margin: 0 1rem; }
+
+.projects .project-item {
   position: relative;
   overflow: hidden; }
-  .projects li img {
+  .projects .project-item img {
     transition: transform .5s ease; }
 
 .projects .project-title {

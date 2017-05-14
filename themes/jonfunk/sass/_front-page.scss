@@ -86,10 +86,19 @@ section {
 /* Projects Section */
 
 .projects {
-  ul {
+  .project-list, .filter {
     display: flex;
   }
-  li {
+  .filter {
+    width: 500px;
+    margin: 0 auto;
+    justify-content: space-around;
+    li {
+      text-transform: uppercase;
+      margin: 0 1rem;
+    }
+  }
+  .project-item {
     position: relative;
     overflow: hidden;
     img {
