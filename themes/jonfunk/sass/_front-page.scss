@@ -86,20 +86,30 @@ section {
 /* Projects Section */
 
 .projects {
-  .project-list, .filter {
+  .project-list, .filters {
     display: flex;
   }
-  .filter {
+  .filters {
     width: 500px;
     margin: 0 auto;
     justify-content: space-around;
     li {
       text-transform: uppercase;
       margin: 0 1rem;
+      color: $color__link;
+      cursor: pointer;
+      transition: color 1s ease;
+      &:hover {
+        color: $color__link-hover;
+      }
+    }
+    .active {
+      color: $color__link-hover;
     }
   }
   .project-item {
     position: relative;
+    display: none;
     overflow: hidden;
     img {
       transition: transform .5s ease;

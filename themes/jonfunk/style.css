@@ -793,21 +793,29 @@ section {
   margin-bottom: 1rem; }
 
 /* Projects Section */
-.projects .project-list, .projects .filter {
+.projects .project-list, .projects .filters {
   display: -ms-flexbox;
   display: flex; }
 
-.projects .filter {
+.projects .filters {
   width: 500px;
   margin: 0 auto;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
-  .projects .filter li {
+  .projects .filters li {
     text-transform: uppercase;
-    margin: 0 1rem; }
+    margin: 0 1rem;
+    color: #b3b3b3;
+    cursor: pointer;
+    transition: color 1s ease; }
+    .projects .filters li:hover {
+      color: black; }
+  .projects .filters .active {
+    color: black; }
 
 .projects .project-item {
   position: relative;
+  display: none;
   overflow: hidden; }
   .projects .project-item img {
     transition: transform .5s ease; }
