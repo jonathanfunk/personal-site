@@ -29,11 +29,13 @@ add_filter( 'nav_menu_link_attributes', 'add_data_atts_to_nav', 10, 4 );
     return $atts;
 }
 
+//These add custom image sizes
 add_image_size( 'project-item-size', 400, 250, true );
 add_image_size( 'desktop-size', 1600, 1000, true );
 add_image_size( 'tablet-size', 640, 400, true );
 add_image_size( 'mobile-size', 320, 200, true );
 
+//This will allow the admin to use custom image sizes
 add_filter( 'image_size_names_choose', 'wpshout_custom_sizes' );
 function wpshout_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
@@ -52,9 +54,11 @@ function my_styles_method() {
         return;
     }
     $url = CFS()->get( 'background_image' );//This is grabbing the background image via Custom Field Suite Plugin
+
     $mobile = wp_get_attachment_image_src($url, 'mobile-size');
     $tablet = wp_get_attachment_image_src($url, 'tablet-size');
     $desktop = wp_get_attachment_image_src($url, 'desktop-size');
+
     $custom_css = "
         .project-hero {
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({$mobile[0]}) no-repeat top center;
@@ -78,7 +82,7 @@ function my_styles_method() {
 }
 add_action( 'wp_enqueue_scripts', 'my_styles_method' );
 
-// add category nicenames in body and post class
+//This adds category nice names to post classes
 function category_id_class( $classes ) {
 	global $post;
 	foreach ( ( get_the_category( $post->ID ) ) as $category ) {
@@ -88,6 +92,8 @@ function category_id_class( $classes ) {
 }
 add_filter( 'post_class', 'category_id_class' );
 
+
+//This will make the title display only the category/tag name
 add_filter( 'get_the_archive_title', function ($title) {
   if ( is_category() ) {
       $title = single_cat_title( '', false );
