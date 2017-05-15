@@ -17,20 +17,17 @@ get_header(); ?>
       <section class="summary">
         <div class="container-small">
           <h2>Summary</h2>
-        </div>
-      </section>
-      <section class="technology">
-        <div class="container-small">
+          <?php echo CFS()->get( 'summary' ); ?>
+          <?php
+          $links = CFS()->get('links');
+          foreach ($links as $link) :
+          ?>
+            <?php echo $link["single_link"]; ?>
+          <?php endforeach ?>              
           <h2>Technology</h2>
-          <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+          <?php the_tags( '<ul class="technology"><li>', '</li><li>', '</li></ul>' ); ?>      
         </div>
       </section>
-      <section class="learning-experience">
-        <div class="container-small">
-          <h2>Learning Experience</h2>
-        </div>
-      </section>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -945,26 +945,35 @@ footer {
     .project-hero {
       height: 100vh; } }
 
-.technology ul {
+.technology {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .technology li {
+    background: #b3b3b3;
+    padding: .2rem 1rem;
+    white-space: nowrap;
+    margin: .5rem;
+    border-radius: 20px;
+    transition: background 1s ease; }
+    .technology li a {
+      color: #2d2d2d;
+      transition: color 1s ease; }
+    .technology li:hover {
+      background: #2d2d2d; }
+      .technology li:hover a {
+        color: #b3b3b3; }
 
-.technology li {
-  background: #b3b3b3;
-  padding: .2rem 1rem;
-  white-space: nowrap;
-  margin: .5rem;
-  border-radius: 20px;
-  transition: background 1s ease; }
-  .technology li a {
-    color: #2d2d2d;
-    transition: color 1s ease; }
-  .technology li:hover {
-    background: #2d2d2d; }
-    .technology li:hover a {
-      color: #b3b3b3; }
+.summary .cfs-hyperlink {
+  display: inline-block;
+  margin: 0 1rem 1.5rem 0;
+  text-transform: uppercase;
+  padding: .5rem;
+  border: 1px solid #b3b3b3;
+  transition: background 1s ease, border 1s ease, color; }
+  .summary .cfs-hyperlink:hover {
+    background: #b3b3b3; }
 
 .hamburger-menu {
   width: 35px;

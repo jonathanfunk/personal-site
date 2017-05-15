@@ -11,12 +11,9 @@
     height: 100vh;
   }
 }
-
 .technology {
-  ul {
-    display: flex;
-    justify-content: space-around;
-  }
+  display: flex;
+  flex-wrap: wrap;
   li {
     background: $color__link;
     padding: .2rem 1rem;
@@ -34,5 +31,19 @@
         color: $color__link;
       }
     }
+  }
+}
+
+.summary {
+  .cfs-hyperlink {
+    display: inline-block;
+    margin: 0 1rem 1.5rem 0;
+    text-transform: uppercase;
+    padding: .5rem;
+    border: 1px solid $color__link;
+    transition: background 1s ease, border 1s ease, color;
+    &:hover {
+      background: $color__link;
+    }    
   }
 }
