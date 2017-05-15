@@ -3,6 +3,7 @@ Theme Name: Jonathan Funk Theme
 Theme URI: http://underscores.me/
 Author: Jonathan Funk
 Author URI: http://www.jon-funk.com
+Text Domain: jonfunk
 Description: A WordPress theme for Jonathan Funk.
 Version: 2.0.0
 License: GNU General Public License v2 or later
@@ -18,31 +19,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Embedded Fonts
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Asides
-	## Comments
-# Media
-	## Captions
-	## Galleries
-# Page Templates
-	## Front page
---------------------------------------------------------------*/
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
