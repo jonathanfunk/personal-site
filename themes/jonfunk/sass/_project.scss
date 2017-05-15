@@ -11,3 +11,17 @@
     height: 100vh;
   }
 }
+
+.technology {
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  li {
+    background: $color__link;
+    padding: .5rem 1rem;
+    a {
+      color: $color__text-main;
+    }
+  }
+}

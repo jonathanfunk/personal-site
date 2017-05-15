@@ -10,10 +10,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<section class="hero">
-				<div class="hero-text">
+				<header>
 					<h1><?php bloginfo( 'name' ); ?></h1>
 					<p><?php bloginfo( 'description' ); ?></p>
-				</div>
+				</header>
 			</section>
 			<section class="about" id="about">
         <div class="container">
