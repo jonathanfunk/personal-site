@@ -750,7 +750,7 @@ section {
 
 .box-link {
   text-transform: uppercase;
-  padding: .5rem;
+  padding: .5rem 1rem;
   border: 1px solid #b3b3b3;
   transition: background 1s ease, border 1s ease, color; }
   .box-link:hover {
@@ -832,16 +832,17 @@ section {
   position: relative;
   display: none;
   overflow: hidden;
-  width: 100%; }
+  width: calc(100% - 1rem);
+  cursor: pointer; }
   .projects .project-item img {
     transition: transform .5s ease;
     width: 100%; }
   @media (min-width: 600px) {
     .projects .project-item {
-      max-width: 50%; } }
+      max-width: calc(50% - 1rem); } }
   @media (min-width: 1024px) {
     .projects .project-item {
-      max-width: 25%; } }
+      max-width: calc(25% - 1rem); } }
 
 .projects .project-title {
   position: absolute;
@@ -850,22 +851,27 @@ section {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.9);
-  display: none;
+  display: -ms-flexbox;
+  display: flex;
   opacity: 0;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
   text-align: center;
-  transition: display .5s ease, opacity 1s ease; }
+  transition: opacity 1s ease; }
+
+.projects .project-title-wrap a {
+  visibility: hidden; }
 
 .projects .item-expanded img {
   transform: scale(1.1); }
 
 .projects .item-expanded .project-title {
-  display: -ms-flexbox;
-  display: flex;
   opacity: 1; }
+
+.projects .item-expanded .project-title-wrap a {
+  visibility: visible; }
 
 /* Client Section */
 .clients ul {
@@ -969,7 +975,7 @@ footer {
   display: inline-block;
   margin: 0 1rem 1.5rem 0;
   text-transform: uppercase;
-  padding: .5rem;
+  padding: .5rem 1rem;
   border: 1px solid #b3b3b3;
   transition: background 1s ease, border 1s ease, color; }
   .summary .cfs-hyperlink:hover {

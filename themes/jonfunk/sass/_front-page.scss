@@ -37,7 +37,7 @@ section {
 
 .box-link {
   text-transform: uppercase;
-  padding: .5rem;
+  padding: .5rem 1rem;
   border: 1px solid $color__link;
   transition: background 1s ease, border 1s ease, color;
   &:hover {
@@ -126,16 +126,17 @@ section {
     position: relative;
     display: none;
     overflow: hidden;
-    width: 100%;
+    width: calc(100% - 1rem);
+    cursor: pointer;
     img {
       transition: transform .5s ease;
       width: 100%;
     }
     @include tablet {
-      max-width: 50%;
+      max-width: calc(50% - 1rem);
     }
     @include desktop {
-      max-width: 25%;
+      max-width: calc(25% - 1rem);
     }
   }
   .project-title {
@@ -145,20 +146,29 @@ section {
     width: 100%;
     height: 100%;
     background: rgba(255,255,255,.9);
-    display: none;
+    display: flex;
     opacity: 0;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: display .5s ease, opacity 1s ease;
+    transition: opacity 1s ease;
+  }
+  .project-title-wrap {
+    a {
+      visibility: hidden;
+    }
   }
   .item-expanded {
     img {
       transform: scale(1.1);
     }
     .project-title {
-      display: flex;
       opacity: 1;
+    }
+    .project-title-wrap {
+      a {
+        visibility: visible;
+      }
     }
   }
 }
