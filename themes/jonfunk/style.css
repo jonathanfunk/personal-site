@@ -759,6 +759,15 @@ section {
   .box-link:hover {
     background: #b3b3b3; }
 
+.error-404 {
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
 /* Hero Section */
 .hero {
   height: 300px;

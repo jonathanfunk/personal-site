@@ -87,7 +87,6 @@ function category_id_class( $classes ) {
 	return $classes;
 }
 add_filter( 'post_class', 'category_id_class' );
-add_filter( 'body_class', 'category_id_class' );
 
 add_filter( 'get_the_archive_title', function ($title) {
   if ( is_category() ) {
