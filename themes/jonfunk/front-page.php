@@ -21,15 +21,22 @@ get_header(); ?>
 				 <?php echo CFS()->get( 'about' ); ?>
          <h2>What I do</h2>
 				 <ul class="grayscale-hover">
-          <?php
-            $fields = CFS()->get('what_i_do');
-            foreach ($fields as $field) :
-            ?>
-              <li>
-                <?php echo '<img src="'.$field["skill_image"].'"/>'; ?>
-                <h3><?php echo $field["skill_name"]; ?></h3>
-              </li>
-            <?php endforeach ?>
+					 <?php
+							$upload_path = content_url() . '/uploads/';
+							$fields = CFS()->get('what_i_do');
+							foreach ($fields as $field) {
+								$skill_image_ID = $field['skill_image'];
+								$skill_image_ALT = get_post_meta($skill_image_ID, '_wp_attachment_image_alt', true);
+								$skill_image_TITLE = get_the_title($skill_image_ID);
+								$skill_image_URL_data = wp_get_attachment_metadata($skill_image_ID, true);
+								$skill_image_URL = $skill_image_URL_data["file"];
+									echo '<li><img src="';
+									echo $upload_path . $skill_image_URL;
+									echo '" title="'.$skill_image_TITLE.'" alt="';
+									echo $skill_image_ALT;
+									echo '"><h3>'.$field["skill_name"].'</h3>';
+							}
+						?>
 					</ul>
         </div>
 			</section>
@@ -72,10 +79,20 @@ get_header(); ?>
         <div class="container-small">
           <h2>Feature Clients</h2>
 				 <ul class="grayscale-hover">
-						<?php
+					 <?php
+							$upload_path = content_url() . '/uploads/';
 							$fields = CFS()->get('feature_clients');
 							foreach ($fields as $field) {
-								echo '<li><img src="'.$field["client"].'"/></li>';
+								$logo_image_ID = $field['client'];
+								$logo_image_ALT = get_post_meta($logo_image_ID, '_wp_attachment_image_alt', true);
+								$logo_image_TITLE = get_the_title($logo_image_ID);
+								$logo_image_URL_data = wp_get_attachment_metadata($logo_image_ID, true);
+								$logo_image_URL = $logo_image_URL_data["file"];
+									echo '<li><img src="';
+									echo $upload_path . $logo_image_URL;
+									echo '" title="'.$logo_image_TITLE.'" alt="';
+									echo $logo_image_ALT;
+									echo '">';
 							}
 						?>
 					</ul>
