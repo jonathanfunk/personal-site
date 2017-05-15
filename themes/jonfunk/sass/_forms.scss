@@ -15,7 +15,7 @@ input[type="submit"] {
 	line-height: 50px;
 	transition: all 1s ease;
 	&:hover {
-		background: black;
+		background: $color__link-hover;
 		color: $color__link;
 	}
 }
@@ -35,8 +35,8 @@ textarea {
 	padding: 1rem;
 	&:focus {
 		outline: none;
-		color:black;
-		border-color: black;
+		color: $color__link-hover;
+		border-color: $color__link-hover;
 	}
 }
 

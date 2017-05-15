@@ -19,9 +19,20 @@
   }
   li {
     background: $color__link;
-    padding: .5rem 1rem;
+    padding: .2rem 1rem;
+    white-space: nowrap;
+    margin: .5rem;
+    border-radius: 20px;
+    transition: background 1s ease;
     a {
       color: $color__text-main;
+      transition: color 1s ease;
+    }
+    &:hover {
+      background: $color__link-hover;
+      a {
+        color: $color__link;
+      }
     }
   }
 }

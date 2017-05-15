@@ -384,7 +384,7 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    background: black;
+    background: #2d2d2d;
     color: #b3b3b3; }
 
 /* Fields */
@@ -406,8 +406,8 @@ textarea {
   input[type="search"]:focus,
   textarea:focus {
     outline: none;
-    color: black;
-    border-color: black; }
+    color: #2d2d2d;
+    border-color: #2d2d2d; }
 
 textarea {
   width: 100%;
@@ -953,9 +953,18 @@ footer {
 
 .technology li {
   background: #b3b3b3;
-  padding: .5rem 1rem; }
+  padding: .2rem 1rem;
+  white-space: nowrap;
+  margin: .5rem;
+  border-radius: 20px;
+  transition: background 1s ease; }
   .technology li a {
-    color: #2d2d2d; }
+    color: #2d2d2d;
+    transition: color 1s ease; }
+  .technology li:hover {
+    background: #2d2d2d; }
+    .technology li:hover a {
+      color: #b3b3b3; }
 
 .hamburger-menu {
   width: 35px;
