@@ -19,13 +19,13 @@
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
-			<header id="masthead" class="site-header" role="banner">
+			<header id="masthead" class="site-header">
 				<div class="container">
           <div class="site-branding">
-            <h2><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><i class="fa fa-code" aria-hidden="true"></i></a></h2>
+            <h2><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><i class="fa fa-code" aria-hidden="true"></i>Jonathan Funk</a></h2>
           </div><!-- .site-branding -->
 
-          <nav id="site-navigation" class="main-navigation" role="navigation">
+          <nav id="site-navigation" class="main-navigation">
 						<div class="hamburger-menu">
 							<div class="bar"></div>	
 						</div>

@@ -449,7 +449,10 @@ a {
   .site-header a:hover {
     color: white; }
   .site-header h2 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 0; }
+    .site-header h2 i {
+      font-size: 2rem; }
 
 .nav-inverse {
   height: 60px;

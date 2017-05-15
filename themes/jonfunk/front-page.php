@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main">
 			<section class="hero">
 				<header>
 					<h1><?php bloginfo( 'name' ); ?></h1>
@@ -18,7 +18,7 @@ get_header(); ?>
 			<section class="about" id="about">
         <div class="container">
          <h2>Who I am</h2>
-				 <p><?php echo CFS()->get( 'about' ); ?></p>
+				 <?php echo CFS()->get( 'about' ); ?>
          <h2>What I do</h2>
 				 <ul class="grayscale-hover">
           <?php
@@ -27,7 +27,7 @@ get_header(); ?>
             ?>
               <li>
                 <?php echo '<img src="'.$field["skill_image"].'"/>'; ?>
-                <h3><?php echo $field["skill_name"]; ?>
+                <h3><?php echo $field["skill_name"]; ?></h3>
               </li>
             <?php endforeach ?>
 					</ul>
@@ -85,8 +85,8 @@ get_header(); ?>
         <div class="container">
           <h2>Contact</h2>
           <ul>
-						<li><a href="https://ca.linkedin.com/in/jonathan-funk" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></a></i>
-						<li><a href="https://github.com/jonathanfunk" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></a></i>
+						<li><a href="https://ca.linkedin.com/in/jonathan-funk" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li><a href="https://github.com/jonathanfunk" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
 						<li><a href="/cdn-cgi/l/email-protection#513b3e3f37243f3a6969113c30383d7f323e3c"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
 					</ul>
 					<?php echo do_shortcode( '[contact-form-7 id="26" title="Contact Form"]' ); ?>
