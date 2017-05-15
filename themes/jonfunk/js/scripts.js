@@ -22,7 +22,7 @@
   })
 
   $('.project-item').on('click', function (event) {
-    $(this).toggleClass('item-expanded');
+    $(this).toggleClass('item-expanded').siblings().removeClass('item-expanded');
   });
 
   $(function () {

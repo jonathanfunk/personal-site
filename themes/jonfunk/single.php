@@ -15,7 +15,7 @@ get_header(); ?>
         </header>
 			</section>
       <section class="summary">
-        <div class="container-small">
+        <div class="container">
           <h2>Summary</h2>
           <?php echo CFS()->get( 'summary' ); ?>
           <?php
