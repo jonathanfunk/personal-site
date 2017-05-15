@@ -767,7 +767,8 @@ section {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  animation: fadein 2s; }
   @media (min-width: 600px) {
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/jellyfish-background-tablet.jpg), center;
@@ -783,6 +784,12 @@ section {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 0; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 /* About Section */
 @media (min-width: 600px) {
@@ -943,7 +950,8 @@ footer {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  animation: fadein 2s; }
   @media (min-width: 600px) {
     .project-hero {
       height: 400px; } }

@@ -1,5 +1,4 @@
 (function ($) {
-
   //This will inverse the navigation colours on scroll
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();

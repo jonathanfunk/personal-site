@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadein 2s;
   @include tablet {
     height: 400px;
   }
